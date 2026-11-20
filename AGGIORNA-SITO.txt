@@ -1,0 +1,5 @@
+SITO DI KAIROS · https://lastkeymedias.github.io
+Account GitHub: lastkeymedias · progetto: lastkeymedias.github.io
+I file del sito sono in questa cartella (APP/SITO). Per cambiare qualcosa chiedi a Claude:
+modifica i file e poi li carica con «git push»; il sito si aggiorna da solo in circa 1 minuto.
+Pagine: index.html (home) · privacy.html · termini.html · img/ (icone)
