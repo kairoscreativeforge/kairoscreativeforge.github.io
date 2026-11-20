@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kairos Creative Forge · LastKeyMedias</title>
+<meta name="description" content="Kairos Creative Forge: le app creative di LastKeyMedias per Mac, in un solo posto.">
+<style>
+:root{--fondo:#0D0A08;--accento:#F4955F;--testo:rgba(255,255,255,.94);--tenue:rgba(255,255,255,.55);--scheda:rgba(255,255,255,.045);--linea:rgba(255,255,255,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fondo);color:var(--testo);font:16px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;background:
+ radial-gradient(40% 35% at 18% 12%,rgba(244,149,95,.22),transparent 70%),
+ radial-gradient(35% 30% at 85% 20%,rgba(182,152,242,.16),transparent 70%),
+ radial-gradient(40% 35% at 60% 90%,rgba(143,220,210,.10),transparent 70%);animation:sfondo 24s ease-in-out infinite alternate}
+@keyframes sfondo{to{transform:translate(4%,-3%) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+a{color:inherit;text-decoration:none}
+.box{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.marchio{display:flex;align-items:center;gap:12px;font-weight:700;font-size:17px}
+.marchio img{width:36px;height:36px}
+.voci{display:flex;gap:26px;font-size:14px;color:var(--tenue)}
+.voci a:hover{color:var(--testo)}
+.eroe{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:72px 0 88px}
+.eroe small{font-size:12px;letter-spacing:.2em;color:var(--accento);font-weight:600}
+.eroe h1{font-size:60px;line-height:1.04;letter-spacing:-.02em;margin:14px 0 20px}
+.eroe h1 span{background:linear-gradient(90deg,#E8808A,#E6964F,#EFD070,#8CE05A,#8FDCD2,#9FD0FF,#B698F2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eroe p{font-size:19px;color:var(--tenue);max-width:520px}
+.pulsanti{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.pill{padding:12px 22px;border-radius:999px;font-weight:600;font-size:15px}
+.pill.accento{background:var(--accento);color:#1C120B}
+.pill.scura{background:rgba(255,255,255,.08);border:1px solid var(--linea)}
+.vetrina{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.vetrina>img{width:58%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+.vetrina>.orbita{position:absolute;width:24%;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+section{padding:72px 0;border-top:1px solid var(--linea)}
+.titolo{font-size:12px;letter-spacing:.2em;color:var(--tenue);font-weight:600;margin-bottom:10px}
+h2{font-size:38px;letter-spacing:-.01em;margin-bottom:34px}
+.griglia{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.app{background:var(--scheda);border:1px solid var(--linea);border-radius:20px;padding:22px}
+.app img{width:78px;height:78px;margin:-7px 0 9px -7px}
+.app .tessera{width:64px;height:64px;border-radius:22%;margin-bottom:16px}
+.app h3{font-size:17px}
+.app p{font-size:13.5px;color:var(--tenue);margin-top:6px}
+.tessera{display:grid;place-items:center;font-weight:700;font-size:27px;background:linear-gradient(160deg,#1d2530,#0f1318)}
+.tessera.ar span{background:linear-gradient(160deg,#cfe8ff,#7fb8f0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.servizi{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.servizio{background:var(--scheda);border:1px solid var(--linea);border-radius:22px;padding:30px;display:flex;gap:22px}
+.gettone{flex:none;width:72px;height:72px;border-radius:50%;padding:4px;background:conic-gradient(from 110deg,#E8808A,#E6964F,#EFD070,#8CE05A,#8FDCD2,#9FD0FF,#B698F2,#E8808A)}
+.gettone div{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 45% 40%,#241B16,#100B09);display:grid;place-items:center;font-weight:700;font-size:26px}
+.servizio h3{font-size:20px;margin-bottom:6px}
+.servizio p{color:var(--tenue);font-size:15px}
+.drive{flex:none;width:72px;height:72px;border-radius:18px;background:rgba(255,255,255,.07);display:grid;place-items:center;font-size:30px}
+.privato{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.privato div{padding:24px;border-radius:18px;border:1px solid var(--linea)}
+.privato b{display:block;margin-bottom:6px}
+.privato p{color:var(--tenue);font-size:14px}
+footer{padding:40px 0 60px;border-top:1px solid var(--linea);color:var(--tenue);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer .voci{gap:20px}
+@media (max-width:860px){
+ .eroe{grid-template-columns:1fr;padding:40px 0 56px}.eroe h1{font-size:42px}
+ .griglia{grid-template-columns:1fr 1fr}.servizi,.privato{grid-template-columns:1fr}
+ .voci.top{display:none}.vetrina{max-width:360px;margin:0 auto;width:100%}
+}
+@media (max-width:480px){.griglia{grid-template-columns:1fr}.servizio{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="box">
+ <nav>
+  <a class="marchio" href="#"><img src="img/icona-1024.png" alt="">Kairos Creative Forge</a>
+  <div class="voci top"><a href="#app">Le app</a><a href="#servizi">Servizi</a><a href="#privacy">Privacy</a></div>
+ </nav>
+
+ <div class="eroe">
+  <div>
+   <small>LASTKEYMEDIAS · PER MAC</small>
+   <h1>Tutte le app creative,<br><span>in un solo posto.</span></h1>
+   <p>Kairos vive nella barra dei menu del Mac: installa, apre e aggiorna le app di LastKeyMedias, e le fa parlare tra loro con Synapse.</p>
+   <div class="pulsanti"><a class="pill accento" href="#app">Scopri le app</a><a class="pill scura" href="#servizi">Synapse e Drive</a></div>
+  </div>
+  <div class="vetrina">
+   <img src="img/icona-1024.png" alt="Kairos">
+   <img class="orbita" src="img/pandora-1024.png" style="top:4%;left:8%" alt="">
+   <img class="orbita" src="img/kroma-1024.png" style="top:2%;right:10%" alt="">
+   <img class="orbita" src="img/halo-1024.png" style="bottom:6%;left:2%" alt="">
+   <img class="orbita" src="img/theia-1024.png" style="bottom:2%;right:6%" alt="">
+   <img class="orbita" src="img/siphon-1024.png" style="top:42%;right:-4%;width:15%" alt="">
+  </div>
+ </div>
+
+ <section id="app">
+  <div class="titolo">LE APP</div>
+  <h2>Ogni lavoro ha la sua app.</h2>
+  <div class="griglia">
+   <div class="app"><img src="img/pandora-1024.png" alt=""><h3>Pandora VideoEditor</h3><p>Monta da solo i reel verticali: tagli, sottotitoli, musica e motion graphic.</p></div>
+   <div class="app"><img src="img/kroma-1024.png" alt=""><h3>Kroma PhotoEditor</h3><p>Sviluppo RAW, colore e maschere intelligenti, tutto in locale.</p></div>
+   <div class="app"><img src="img/theia-1024.png" alt=""><h3>Theia Storyboards</h3><p>Lavagna infinita per gli storyboard dei video, con la modalità Presenta.</p></div>
+   <div class="app"><img src="img/halo-1024.png" alt=""><h3>Halo FileConverter</h3><p>Una ruota nel Finder: converti, comprimi, sposta e condividi al volo.</p></div>
+   <div class="app"><img src="img/siphon-1024.png" alt=""><h3>Siphon WebDownloader</h3><p>Scarica in MP4 o MP3 alla massima qualità, per i tuoi contenuti.</p></div>
+   <div class="app"><img src="img/argus-1024.png" alt=""><h3>Argus Statistics</h3><p>Risposte automatiche, post programmati e statistiche Instagram.</p></div>
+   <div class="app"><img src="img/pulse-1024.png" alt=""><h3>Pulse</h3><p>Click e movimenti del mouse automatici, dalla barra dei menu.</p></div>
+   <div class="app"><img src="img/atlas-1024.png" alt=""><h3>Atlas Dashboard</h3><p>Progetti, clienti e incassi. I dati restano solo sul Mac.</p></div>
+  </div>
+ </section>
+
+ <section id="servizi">
+  <div class="titolo">I SERVIZI DI KAIROS</div>
+  <h2>I file passano da un'app all'altra.</h2>
+  <div class="servizi">
+   <div class="servizio"><div class="gettone"><div>Sy</div></div><div><h3>Synapse</h3><p>Da Halo, Siphon o dal Finder scegli «Invia a…» e il file arriva già pronto nell'app giusta. Niente copie doppie: anche un video da 4 GB occupa spazio una volta sola.</p></div></div>
+   <div class="servizio"><div class="drive">△</div><div><h3>Condividi con Drive</h3><p>Un clic e il file va nel tuo Google Drive, con il link già copiato da mandare al cliente. Scade dopo 24 ore, 48 ore, 7 o 30 giorni, e poi si cancella da solo.</p></div></div>
+  </div>
+ </section>
+
+ <section id="privacy">
+  <div class="titolo">PRIVACY</div>
+  <h2>I tuoi file restano tuoi.</h2>
+  <div class="privato">
+   <div><b>Nessun server nostro</b><p>Tutto passa tra il tuo Mac e il tuo Google Drive. Niente pubblicità, niente statistiche.</p></div>
+   <div><b>Permesso minimo</b><p>Synapse vede solo i file che carica lui, non il resto del tuo Drive.</p></div>
+   <div><b>Chiavi nel Portachiavi</b><p>I codici di accesso restano nel Portachiavi del Mac, mai in chiaro.</p></div>
+  </div>
+ </section>
+
+ <footer>
+  <span>© 2026 LastKeyMedias · Kairos Creative Forge</span>
+  <div class="voci"><a href="privacy.html">Privacy</a><a href="termini.html">Termini</a></div>
+ </footer>
+</div>
+</body>
+</html>
