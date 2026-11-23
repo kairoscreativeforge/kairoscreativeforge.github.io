@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kairos Creative Forge · LastKeyMedias</title>
-<meta name="description" content="Kairos Creative Forge: le app creative di LastKeyMedias per Mac, in un solo posto.">
+<meta name="description" content="Kairos Creative Forge: tutte le app creative di LastKeyMedias per Mac in un solo posto. Zero abbonamenti, i tuoi file restano sul Mac.">
 <style>
 :root{--fondo:#0D0A08;--accento:#F4955F;--testo:rgba(255,255,255,.94);--tenue:rgba(255,255,255,.55);--scheda:rgba(255,255,255,.045);--linea:rgba(255,255,255,.09)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -32,19 +32,16 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0
 .pill.accento{background:var(--accento);color:#1C120B}
 .pill.scura{background:rgba(255,255,255,.08);border:1px solid var(--linea)}
 .vetrina{position:relative;aspect-ratio:1;display:grid;place-items:center}
-.vetrina>img{width:58%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
-.vetrina>.orbita{position:absolute;width:24%;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+.vetrina>img{width:46%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
+.vetrina>.orbita{position:absolute;width:15%;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
 section{padding:72px 0;border-top:1px solid var(--linea)}
 .titolo{font-size:12px;letter-spacing:.2em;color:var(--tenue);font-weight:600;margin-bottom:10px}
 h2{font-size:38px;letter-spacing:-.01em;margin-bottom:34px}
 .griglia{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .app{background:var(--scheda);border:1px solid var(--linea);border-radius:20px;padding:22px}
 .app img{width:78px;height:78px;margin:-7px 0 9px -7px}
-.app .tessera{width:64px;height:64px;border-radius:22%;margin-bottom:16px}
 .app h3{font-size:17px}
 .app p{font-size:13.5px;color:var(--tenue);margin-top:6px}
-.tessera{display:grid;place-items:center;font-weight:700;font-size:27px;background:linear-gradient(160deg,#1d2530,#0f1318)}
-.tessera.ar span{background:linear-gradient(160deg,#cfe8ff,#7fb8f0);-webkit-background-clip:text;background-clip:text;color:transparent}
 .servizi{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .servizio{background:var(--scheda);border:1px solid var(--linea);border-radius:22px;padding:30px;display:flex;gap:22px}
 .gettone{flex:none;width:72px;height:72px;border-radius:50%;padding:4px;background:conic-gradient(from 110deg,#E8808A,#E6964F,#EFD070,#8CE05A,#8FDCD2,#9FD0FF,#B698F2,#E8808A)}
@@ -59,11 +56,20 @@ h2{font-size:38px;letter-spacing:-.01em;margin-bottom:34px}
 footer{padding:40px 0 60px;border-top:1px solid var(--linea);color:var(--tenue);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 footer .voci{gap:20px}
 @media (max-width:860px){
- .eroe{grid-template-columns:1fr;padding:40px 0 56px}.eroe h1{font-size:42px}
- .griglia{grid-template-columns:1fr 1fr}.servizi,.privato{grid-template-columns:1fr}
- .voci.top{display:none}.vetrina{max-width:360px;margin:0 auto;width:100%}
+ .eroe{grid-template-columns:1fr;padding:40px 0 56px;text-align:center}
+ .eroe h1{font-size:42px}
+ .eroe small{display:block}
+ .eroe p{font-size:17px;margin:0 auto}
+ .pulsanti{justify-content:center}
+ .voci.top{display:none}
+ .vetrina{max-width:320px;margin:30px auto 0;width:100%}
+ section{text-align:center}
+ .titolo,h2{text-align:center}
+ .app,.privato div{text-align:left}
+ .app img{margin:-7px auto 9px}
+ .servizio{text-align:left}
 }
-@media (max-width:480px){.griglia{grid-template-columns:1fr}.servizio{flex-direction:column}}
+@media (max-width:480px){.griglia{grid-template-columns:1fr}.servizio{flex-direction:column;align-items:center;text-align:center}}
 </style>
 </head>
 <body>
@@ -77,32 +83,36 @@ footer .voci{gap:20px}
   <div>
    <small>LASTKEYMEDIAS · PER MAC</small>
    <h1>Tutte le app creative,<br><span>in un solo posto.</span></h1>
-   <p>Kairos vive nella barra dei menu del Mac: installa, apre e aggiorna le app di LastKeyMedias, e le fa parlare tra loro con Synapse.</p>
+   <p>Un'unica app nella barra dei menu installa, apre e aggiorna tutti i tuoi strumenti creativi — e li fa lavorare insieme. Zero abbonamenti, nessun server: i tuoi file restano sul Mac.</p>
    <div class="pulsanti"><a class="pill accento" href="#app">Scopri le app</a><a class="pill scura" href="#servizi">Synapse e Drive</a></div>
   </div>
   <div class="vetrina">
    <img src="img/icona-1024.png" alt="Kairos">
-   <img class="orbita" src="img/pandora-1024.png" style="top:4%;left:8%" alt="">
-   <img class="orbita" src="img/kroma-1024.png" style="top:2%;right:10%" alt="">
-   <img class="orbita" src="img/halo-1024.png" style="bottom:6%;left:2%" alt="">
-   <img class="orbita" src="img/theia-1024.png" style="bottom:2%;right:6%" alt="">
-   <img class="orbita" src="img/siphon-1024.png" style="top:42%;right:-4%;width:15%" alt="">
+   <img class="orbita" src="img/pandora-1024.png" style="top:1%;left:42%" alt="">
+   <img class="orbita" src="img/kroma-1024.png" style="top:10%;left:70%" alt="">
+   <img class="orbita" src="img/halo-1024.png" style="top:35%;left:84%" alt="">
+   <img class="orbita" src="img/theia-1024.png" style="top:64%;left:79%" alt="">
+   <img class="orbita" src="img/argus-1024.png" style="top:82%;left:57%" alt="">
+   <img class="orbita" src="img/talos-1024.png" style="top:82%;left:28%" alt="">
+   <img class="orbita" src="img/atlas-1024.png" style="top:64%;left:6%" alt="">
+   <img class="orbita" src="img/siphon-1024.png" style="top:35%;left:1%" alt="">
+   <img class="orbita" src="img/pulse-1024.png" style="top:10%;left:15%" alt="">
   </div>
  </div>
 
  <section id="app">
   <div class="titolo">LE APP</div>
-  <h2>Ogni lavoro ha la sua app.</h2>
+  <h2>Uno strumento per ogni lavoro.</h2>
   <div class="griglia">
-   <div class="app"><img src="img/pandora-1024.png" alt=""><h3>Pandora VideoEditor</h3><p>Monta da solo i reel verticali: tagli, sottotitoli, musica e motion graphic.</p></div>
-   <div class="app"><img src="img/kroma-1024.png" alt=""><h3>Kroma PhotoEditor</h3><p>Sviluppo RAW, colore e maschere intelligenti, tutto in locale.</p></div>
-   <div class="app"><img src="img/theia-1024.png" alt=""><h3>Theia Storyboards</h3><p>Lavagna infinita per gli storyboard dei video, con la modalità Presenta.</p></div>
-   <div class="app"><img src="img/halo-1024.png" alt=""><h3>Halo FileConverter</h3><p>Una ruota nel Finder: converti, comprimi, sposta e condividi al volo.</p></div>
-   <div class="app"><img src="img/siphon-1024.png" alt=""><h3>Siphon WebDownloader</h3><p>Scarica in MP4 o MP3 alla massima qualità, per i tuoi contenuti.</p></div>
-   <div class="app"><img src="img/argus-1024.png" alt=""><h3>Argus ContentPlanner</h3><p>Risposte automatiche, post programmati e statistiche Instagram.</p></div>
-   <div class="app"><img src="img/talos-1024.png" alt=""><h3>Talos VPN</h3><p>Connessione protetta sui Wi-Fi che non conosci, con kill switch.</p></div>
-   <div class="app"><img src="img/pulse-1024.png" alt=""><h3>Pulse</h3><p>Click e movimenti del mouse automatici, dalla barra dei menu.</p></div>
-   <div class="app"><img src="img/atlas-1024.png" alt=""><h3>Atlas Dashboard</h3><p>Progetti, clienti e incassi. I dati restano solo sul Mac.</p></div>
+   <div class="app"><img src="img/pandora-1024.png" alt=""><h3>Pandora VideoEditor</h3><p>Il montaggio che si fa da solo. Dai il girato: taglia le pause, mette sottotitoli, musica e grafica. Pronto da pubblicare, in orizzontale o in verticale.</p></div>
+   <div class="app"><img src="img/kroma-1024.png" alt=""><h3>Kroma PhotoEditor</h3><p>Ritocco da professionista, tutto sul tuo Mac. RAW, colore e maschere intelligenti — senza abbonamenti e senza caricare le tue foto da nessuna parte.</p></div>
+   <div class="app"><img src="img/theia-1024.png" alt=""><h3>Theia Storyboards</h3><p>Una lavagna infinita per pensare per immagini. Storyboard, moodboard, mappe e idee: trascini, colleghi e vedi l'intero progetto in un colpo d'occhio.</p></div>
+   <div class="app"><img src="img/halo-1024.png" alt=""><h3>Halo FileConverter</h3><p>Converti qualsiasi file senza aprire niente. Dal Finder scegli il formato: Halo converte, comprime e condivide. Niente siti, niente upload, niente attese.</p></div>
+   <div class="app"><img src="img/siphon-1024.png" alt=""><h3>Siphon WebDownloader</h3><p>Scarichi incollando un link, e basta. MP4 o MP3 alla massima qualità — con un controllo che non ti riempie il Mac di copie doppie dello stesso file.</p></div>
+   <div class="app"><img src="img/argus-1024.png" alt=""><h3>Argus ContentPlanner</h3><p>Instagram che lavora al posto tuo. Risposte automatiche, post programmati e i numeri che contano: cresci senza vivere incollato al telefono.</p></div>
+   <div class="app"><img src="img/talos-1024.png" alt=""><h3>Talos VPN</h3><p>Protezione su ogni Wi-Fi, di casa o del bar. Nasconde cosa fai online, ti avvisa delle reti pericolose e ferma pubblicità e tracker. Nessun registro, mai.</p></div>
+   <div class="app"><img src="img/pulse-1024.png" alt=""><h3>Pulse</h3><p>I click ripetitivi falli fare a lui. Automatizza clic e movimenti del mouse dalla barra dei menu: imposti una volta, Pulse ripete all'infinito.</p></div>
+   <div class="app"><img src="img/atlas-1024.png" alt=""><h3>Atlas Dashboard</h3><p>Progetti, clienti e incassi in un solo sguardo. E restano solo tuoi: Atlas non va mai su internet e non condivide niente, nemmeno con le altre app.</p></div>
   </div>
  </section>
 
